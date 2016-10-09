@@ -106,7 +106,13 @@ object CS143Utils {
    */
   def getUdfFromExpressions(expressions: Seq[Expression]): ScalaUdf = {
     // IMPLEMENT ME
-    null
+    var udf: ScalaUdf = null
+    for (e <- expressions) {
+      if (e.isInstanceOf[ScalaUdf]) {
+        udf = e.asInstanceOf[ScalaUdf]
+      }
+    }
+    udf
   }
 
   /**
@@ -189,12 +195,25 @@ object CachingIteratorGenerator {
 
         def hasNext() = {
           // IMPLEMENT ME
-          false
+          input.hasNext
         }
 
         def next() = {
           // IMPLEMENT ME
-          null
+          var row = input.next()
+          var myCacheKey = cacheKeyProjection(row)
+          var udfProjection = {
+            if (cache.containsKey(myCacheKey)) {
+              cache.get(myCacheKey)
+            }
+            else {
+              var myUdfProjection = udfProject(row)
+              cache.put(myCacheKey, myUdfProjection)
+              myUdfProjection
+            }
+          }
+            var rowProjection = preUdfProjection(row) ++ udfProjection ++ postUdfProjection(row)
+            Row.fromSeq(rowProjection)
         }
       }
     }

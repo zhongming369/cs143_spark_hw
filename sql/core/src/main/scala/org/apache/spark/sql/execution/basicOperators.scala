@@ -101,14 +101,21 @@ case class PartitionProject(projectList: Seq[Expression], child: SparkPlan) exte
     // IMPLEMENT ME
 
     new Iterator[Row] {
+      var currentIterator: Iterator[Row] = null
+      var partitionIterator: Iterator[DiskPartition] = DiskHashedRelation(input, keyGenerator).getIterator
       def hasNext() = {
         // IMPLEMENT ME
-        false
+        if (currentIterator == null || !currentIterator.hasNext){
+          fetchNextPartition()
+        }
+        else{
+          true
+        }
       }
 
       def next() = {
         // IMPLEMENT ME
-        null
+        currentIterator.next()
       }
 
       /**
@@ -119,7 +126,36 @@ case class PartitionProject(projectList: Seq[Expression], child: SparkPlan) exte
        */
       private def fetchNextPartition(): Boolean  = {
         // IMPLEMENT ME
-        false
+        if (partitionIterator.hasNext){
+          var currentPartition = partitionIterator.next()
+          var cachingGenerator = CS143Utils.generateCachingIterator(projectList, child.output)
+          var data: Iterator[Row] = currentPartition.getData()
+          currentIterator = cachingGenerator(data)
+          if (currentIterator.hasNext) {
+            true
+          }
+          else {
+            var stopWhile: Boolean = currentIterator.hasNext // 0
+            var hasNext: Boolean = currentIterator.hasNext // 0
+            while (!stopWhile){
+              if(partitionIterator.hasNext){
+                currentPartition = partitionIterator.next()
+                data = currentPartition.getData()
+                currentIterator = cachingGenerator(data)
+                hasNext = currentIterator.hasNext
+                stopWhile = currentIterator.hasNext
+              }
+              else{
+                stopWhile = true
+                hasNext = false
+              }
+            }
+            hasNext
+          }
+        }
+        else {
+          false
+        }
       }
     }
   }
@@ -271,7 +307,8 @@ case class TakeOrdered(limit: Int, sortOrder: Seq[SortOrder], child: SparkPlan) 
 /**
  * :: DeveloperApi ::
  * Performs a sort on-heap.
- * @param global when true performs a global sort of all partitions by shuffling the data first
+  *
+  * @param global when true performs a global sort of all partitions by shuffling the data first
  *               if necessary.
  */
 @DeveloperApi
@@ -296,7 +333,8 @@ case class Sort(
 /**
  * :: DeveloperApi ::
  * Performs a sort, spilling to disk as needed.
- * @param global when true performs a global sort of all partitions by shuffling the data first
+  *
+  * @param global when true performs a global sort of all partitions by shuffling the data first
  *               if necessary.
  */
 @DeveloperApi
@@ -323,7 +361,8 @@ case class ExternalSort(
 /**
  * :: DeveloperApi ::
  * Computes the set of distinct input rows using a HashSet.
- * @param partial when true the distinct operation is performed partially, per partition, without
+  *
+  * @param partial when true the distinct operation is performed partially, per partition, without
  *                shuffling the data.
  * @param child the input query plan.
  */

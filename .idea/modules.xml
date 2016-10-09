@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/graphx/src/main/main.iml" filepath="$PROJECT_DIR$/graphx/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive-thriftserver/src/main/main1.iml" filepath="$PROJECT_DIR$/sql/hive-thriftserver/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/common/src/main/main10.iml" filepath="$PROJECT_DIR$/network/common/src/main/main10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/shuffle/src/main/main11.iml" filepath="$PROJECT_DIR$/network/shuffle/src/main/main11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/core/src/main/main12.iml" filepath="$PROJECT_DIR$/sql/core/src/main/main12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/yarn/src/main/main13.iml" filepath="$PROJECT_DIR$/network/yarn/src/main/main13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive-thriftserver/v0.12.0/src/main/main14.iml" filepath="$PROJECT_DIR$/sql/hive-thriftserver/v0.12.0/src/main/main14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yarn/src/main/main15.iml" filepath="$PROJECT_DIR$/yarn/src/main/main15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mllib/src/main/main16.iml" filepath="$PROJECT_DIR$/mllib/src/main/main16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/catalyst/src/main/main17.iml" filepath="$PROJECT_DIR$/sql/catalyst/src/main/main17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/src/main/main18.iml" filepath="$PROJECT_DIR$/tools/src/main/main18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repl/scala-2.10/src/main/main19.iml" filepath="$PROJECT_DIR$/repl/scala-2.10/src/main/main19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming/src/main/main2.iml" filepath="$PROJECT_DIR$/streaming/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive-thriftserver/v0.13.1/src/main/main20.iml" filepath="$PROJECT_DIR$/sql/hive-thriftserver/v0.13.1/src/main/main20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive/v0.12.0/src/main/main3.iml" filepath="$PROJECT_DIR$/sql/hive/v0.12.0/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bagel/src/main/main4.iml" filepath="$PROJECT_DIR$/bagel/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/src/main/main5.iml" filepath="$PROJECT_DIR$/core/src/main/main5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive/src/main/main6.iml" filepath="$PROJECT_DIR$/sql/hive/src/main/main6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repl/scala-2.11/src/main/main7.iml" filepath="$PROJECT_DIR$/repl/scala-2.11/src/main/main7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repl/src/main/main8.iml" filepath="$PROJECT_DIR$/repl/src/main/main8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive/v0.13.1/src/main/main9.iml" filepath="$PROJECT_DIR$/sql/hive/v0.13.1/src/main/main9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/spark.iml" filepath="$PROJECT_DIR$/mllib/src/main/scala/org/apache/spark/spark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bagel/target/target.iml" filepath="$PROJECT_DIR$/bagel/target/target.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/catalyst/target/target1.iml" filepath="$PROJECT_DIR$/sql/catalyst/target/target1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming/target/target2.iml" filepath="$PROJECT_DIR$/streaming/target/target2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graphx/target/target3.iml" filepath="$PROJECT_DIR$/graphx/target/target3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/target/target4.iml" filepath="$PROJECT_DIR$/core/target/target4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/target/target5.iml" filepath="$PROJECT_DIR$/tools/target/target5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repl/scala-2.11/src/test/test.iml" filepath="$PROJECT_DIR$/repl/scala-2.11/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mllib/src/test/test1.iml" filepath="$PROJECT_DIR$/mllib/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/src/test/test10.iml" filepath="$PROJECT_DIR$/core/src/test/test10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming/src/test/test11.iml" filepath="$PROJECT_DIR$/streaming/src/test/test11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/common/src/test/test12.iml" filepath="$PROJECT_DIR$/network/common/src/test/test12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graphx/src/test/test13.iml" filepath="$PROJECT_DIR$/graphx/src/test/test13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repl/src/test/test14.iml" filepath="$PROJECT_DIR$/repl/src/test/test14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/shuffle/src/test/test15.iml" filepath="$PROJECT_DIR$/network/shuffle/src/test/test15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bagel/src/test/test2.iml" filepath="$PROJECT_DIR$/bagel/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive/src/test/test3.iml" filepath="$PROJECT_DIR$/sql/hive/src/test/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive-thriftserver/src/test/test4.iml" filepath="$PROJECT_DIR$/sql/hive-thriftserver/src/test/test4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yarn/src/test/test5.iml" filepath="$PROJECT_DIR$/yarn/src/test/test5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/core/src/test/test6.iml" filepath="$PROJECT_DIR$/sql/core/src/test/test6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/catalyst/src/test/test7.iml" filepath="$PROJECT_DIR$/sql/catalyst/src/test/test7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repl/scala-2.10/src/test/test8.iml" filepath="$PROJECT_DIR$/repl/scala-2.10/src/test/test8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sql/hive/compatibility/src/test/test9.iml" filepath="$PROJECT_DIR$/sql/hive/compatibility/src/test/test9.iml" />
+    </modules>
+  </component>
+</project>
